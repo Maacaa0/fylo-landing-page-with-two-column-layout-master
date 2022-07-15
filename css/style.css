@@ -91,7 +91,7 @@ header > ul {
 }
 
 .upper-input:focus {
-    border: 2px solid #555;
+    /* border: 2px solid #555; */
     transition: 200ms ease-in-out;
   }
 
@@ -262,9 +262,9 @@ header > ul {
 }
 
 
-.pre-footer > div > form > input:focus {
-    border: 2px solid #555;
-    transition: 200ms ease-in-out;
+.pre-footer > div > form > input:focus-visible {
+    border: 2px solid black;
+    outline: none;
   }
   
 
@@ -346,17 +346,18 @@ header > ul {
 
   .info-menu > li:hover, .general-info > li:hover {
     color: #003b89;
-    transition: 250ms ease-in-out;
+    transition: 150ms ease-in-out;
   }
 
   .social-site {
     width: 1.9em;
     aspect-ratio: 1;
+    border-radius: 50%;
   }
 
   .social-site:hover {
     outline: 2px solid hsl(0deg 0% 100%);
-    transition: 250ms ease-in-out;
+    transition: 50ms ease-in-out;
     border-radius: 50%;
   }
 
@@ -364,15 +365,29 @@ header > ul {
     cursor: pointer;
   }
 
+   /* -----MEDIA QUERIES----- */
+
   @media (max-width:1250px) {
     .pre-footer {
         flex-direction: column;
         gap: 3em;
+        align-items: center;
+        text-align: center;
 
     }
+
+    .pre-footer > div > form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+
     footer {
         flex-direction: column;
-        align-content: center;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
         gap:0;
         padding: 2em 0 1em 0;
@@ -397,7 +412,7 @@ header > ul {
     }
 
     .top-section {
-        min-width: 37em;
+        min-width: 37.4em;
         background-size: 50em;
         background-position: top center, bottom center;
         text-align: center;
@@ -413,10 +428,14 @@ header > ul {
     }
 
     .middle-section {
-        min-width: 37em;
+        min-width: 37.4em;
         padding-top: 30em;
         padding-left: 1em;
         background-position: top center;
+    }
+
+    .review-box {
+        margin: 3em auto 0 auto;
     }
 
     .middle-section > h1 {
@@ -431,12 +450,12 @@ header > ul {
     }
 
     .pre-footer {
-        min-width: 37em;
+        min-width: 37.4em;
         padding-left: 1em;
     }
 
     footer {
-        min-width: 37em;
+        min-width: 37.4em;
         padding-left: 1em;
     }
 
@@ -460,13 +479,3 @@ header > ul {
         margin-left: 0;
     }
   }
-
- 
-
-
-
-
-
-
-
-
